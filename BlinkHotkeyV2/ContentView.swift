@@ -62,6 +62,8 @@ struct ContentView: View {
                             .foregroundColor(cameraManager.blinkDetected ? .green : .red)
                         Text("Current Eye Openness: \(cameraManager.currentEyeOpenness, specifier: "%.3f")")
                         Text("Threshold: \(threshold, specifier: "%.3f")")
+                        Text("Blink Count: \(cameraManager.blinkCount)")
+                            .font(.subheadline)
                     } else {
                         Text("Please calibrate first.")
                             .foregroundColor(.orange)
